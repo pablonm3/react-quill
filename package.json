@@ -11,11 +11,18 @@
     "react-dom": "^16.2.0",
     "react-dom-factories": "^1.0.2",
     "react-mentions": "^1.2.2",
-    "webpack": "^3.11.0"
+    "quill": "^1.2.6",
+    "webpack": "^3.11.0",
+    "create-react-class": "^15.6.0",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
+    "@types/quill": "*",
+    "@types/react": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
+    "debug": "webpack --watch",
     "build": "webpack"
   },
   "devDependencies": {
@@ -24,12 +31,6 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1",
-    "create-react-class": "^15.6.0",
-    "lodash": "^4.17.4",
-    "prop-types": "^15.5.10",
-    "quill": "^1.2.6",
-    "@types/quill": "*",
-    "@types/react": "*"
+    "babel-preset-env": "^1.5.1"
   }
 }
