@@ -362,12 +362,7 @@ var QuillComponent = createClass({
 			<div key={2}>
 					{this.renderEditingArea()}		
 			</div>
-			<MentionsInput value={this.props.value} onChange={this.props.onChange}>
-					<Mention
-						trigger="@"
-						data={data}
-					/>
-			</MentionsInput>
+			test
 		</div>
 	);
 		/*
