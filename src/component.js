@@ -359,7 +359,7 @@ var QuillComponent = createClass({
 	console.log("props.value: ", this.props.value)
 	return (
 		<div>
-			test
+			   test 
 		</div>
 	);
 		/*
