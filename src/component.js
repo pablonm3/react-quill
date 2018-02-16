@@ -359,9 +359,6 @@ var QuillComponent = createClass({
 	console.log("props.value: ", this.props.value)
 	return (
 		<div>
-			<div key={2}>
-					{this.renderEditingArea()}		
-			</div>
 			test
 		</div>
 	);
