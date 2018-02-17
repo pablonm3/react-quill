@@ -1,4 +1,3 @@
-'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -9,8 +8,6 @@ var some = require('lodash/some');
 var isEqual = require('lodash/isEqual');
 var T = require('prop-types');
 var DOM = require('react-dom-factories');
-var MentionsInput = require("react-mentions").MentionsInput;
-var Mention = require("react-mentions").Mention;
 
 var QuillComponent = createClass({
 
@@ -350,46 +347,16 @@ var QuillComponent = createClass({
 	},
 
 	render: function() {
-	const data = [
-			{ id: '544as', display: 'pablo' },
-			{ id: '544asaas', display: 'sina' },
-			{ id: '544asa', display: 'agus' }
-		  ];
-	console.log("props.value: ", this.props.value)
-	/*return (
-		<div>deeded
-			   <MentionsInput value="this.props.value" onChange={this.props.onChange}> 
-					<Mention 
-						trigger="@" 
-						data={data} 
-					/> 
-				</MentionsInput> 
-		</div>
-	);*/
-		return <div
-				id={this.props.id}
-				style={this.props.style}
-				key={this.state.generation}
-				className={['quill'].concat(this.props.className).join(' ')}
-				onKeyPress={this.props.onKeyPress}
-				onKeyDown={this.props.onKeyDown}
-				onKeyUp={this.props.onKeyUp}
-				>
-					{this.renderEditingArea()}
-			</div>
+		return DOM.div({
+			id: this.props.id,
+			style: this.props.style,
+			key: this.state.generation,
+			className: ['quill'].concat(this.props.className).join(' '),
+			onKeyPress: this.props.onKeyPress,
+			onKeyDown: this.props.onKeyDown,
+			onKeyUp: this.props.onKeyUp },
+			this.renderEditingArea()
 		);
-		/*return (
-			<div id={this.props.id}
-				 style={this.props.style}
-				 key={this.state.generation}
-				 className={['quill'].concat(this.props.className).join(' ')}
-				 onKeyPress={this.props.onKeyPress}
-				 onKeyDown={this.props.onKeyDown}
-				 onKeyUp={this.props.onKeyUp}
-			>
-				{this.renderEditingArea()}
-			</div>
-		);*/
 	},
 
 	onEditorChangeText: function(value, delta, source, editor) {
