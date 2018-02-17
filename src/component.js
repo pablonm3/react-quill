@@ -366,16 +366,17 @@ var QuillComponent = createClass({
 				</MentionsInput> 
 		</div>
 	);*/
-		return DOM.div({
-			id: this.props.id,
-			style: this.props.style,
-			key: this.state.generation,
-			className: ['quill'].concat(this.props.className).join(' '),
-			onKeyPress: this.props.onKeyPress,
-			onKeyDown: this.props.onKeyDown,
-			onKeyUp: this.props.onKeyUp
-		},
-			this.renderEditingArea()
+		return <div
+				id={this.props.id}
+				style={this.props.style}
+				key={this.state.generation}
+				className={['quill'].concat(this.props.className).join(' ')}
+				onKeyPress={this.props.onKeyPress}
+				onKeyDown={this.props.onKeyDown}
+				onKeyUp={this.props.onKeyUp}
+				>
+					{this.renderEditingArea()}
+			</div>
 		);
 		/*return (
 			<div id={this.props.id}
