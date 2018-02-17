@@ -355,34 +355,17 @@ var QuillComponent = createClass({
 			{ id: '544asaas', display: 'sina' },
 			{ id: '544asa', display: 'agus' }
 		  ];
-	console.log("state.value: ", this.state.value)
 	console.log("props.value: ", this.props.value)
-	return (
-		<div>
-			   <div key={2}> 
-					{this.renderEditingArea()}     
-				</div> 
-				<MentionsInput value={this.props.value} onChange={this.props.onChange}> 
+	/*return (
+		<div>deeded
+			   <MentionsInput value="this.props.value" onChange={this.props.onChange}> 
 					<Mention 
 						trigger="@" 
 						data={data} 
 					/> 
 				</MentionsInput> 
 		</div>
-	);
-		/*
-				<div  		id={this.props.id}
-							style={this.props.style}
-							key={this.state.generation}
-							className={['quill'].concat(this.props.className).join(' ')}
-							onKeyPress={this.props.onKeyPress}
-							onKeyDown={this.props.onKeyDown}
-							onKeyUp={this.props.onKeyUp }
-							value={this.props.value}
-							onChange={this.props.onChange}>
-				</div>
-		
-		
+	);*/
 		return DOM.div({
 			id: this.props.id,
 			style: this.props.style,
@@ -393,7 +376,7 @@ var QuillComponent = createClass({
 			onKeyUp: this.props.onKeyUp
 		},
 			this.renderEditingArea()
-		);*/
+		);
 		/*return (
 			<div id={this.props.id}
 				 style={this.props.style}
